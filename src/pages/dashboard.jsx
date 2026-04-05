@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 
 import { LoadingService } from "../services/loadingService";
@@ -132,9 +132,12 @@ function Dashboard() {
                                             <td className="py-3 px-4">{new Date(device.created_at).toLocaleDateString()}</td>
 
                                             <td className="py-3 px-4  ">
-                                                <a className="rounded hover:text-white bg-blue-100 hover:bg-blue-400 p-2 font-bold"
-                                                    href={`https://dashboard-tau-gules-32.vercel.app/devices/${device.id}/${device.device_type_id}/`}
-                                                >Details &rarr;</a></td>
+                                                <Link
+                                                    className="rounded hover:text-white bg-blue-100 hover:bg-blue-400 p-2 font-bold"
+                                                    to={`/devices/${device.id}/${device.device_type_id}`}
+                                                    >Details →
+                                                </Link>
+                                            </td>
 
                                         </tr>
                                     ))
