@@ -133,9 +133,9 @@ function Dashboard() {
 
                                             <td className="py-3 px-4  ">
                                                 <a className="rounded hover:text-white bg-blue-100 hover:bg-blue-400 p-2 font-bold"
-                                                    href={`http://localhost:5173/devices/${device.id}/${device.device_type_id}/`}
+                                                    href={`https://dashboard-tau-gules-32.vercel.app/devices/${device.id}/${device.device_type_id}/`}
                                                 >Details &rarr;</a></td>
-                                            {/* href={`http://localhost:5173/devices/${device.id}/`} */}
+
                                         </tr>
                                     ))
                                 ) : (
@@ -158,7 +158,7 @@ function Dashboard() {
                         <div className="col-span-1 sm:col-span-2 md:col-span-1">
                             <GoToCard heading='Debug Log' to='/debug' />
                         </div>
-                        
+
                     </div>
                 </footer>
 
